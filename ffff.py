@@ -4,13 +4,14 @@ driver = webdriver.Chrome(executable_path="chromedriver.exe")
 driver.get("https://instagram.com")
 sleep(4)
 driver.find_element_by_xpath(("//input[@name=\"username\"]"))\
-    .send_keys(("students.memes.in"))
+    .send_keys(("your username"))
 driver.find_element_by_xpath(("//input[@name=\"password\"]"))\
-    .send_keys(("tdp@2003"))    
+    .send_keys(("your password"))    
 driver.find_element_by_xpath('//button[@type="submit"]')\
     .click()
 sleep(3) 
 for i in range(7):
+    #enter link of profile you want to follow their followers
     driver.get("https://www.instagram.com/akshaykumar/")
     sleep(5)
     driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/header/section/ul/li[2]/a')\
